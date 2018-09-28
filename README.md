@@ -2,74 +2,24 @@
 /*This is the pre work Hello world project for android assignment
 I LOVE TO CODE!*/
 
-package com.example.user.helloworld;
+## Hello World Pre Work!
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.text.TextUtils;
-import android.util.Log;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
+### App Description
+`TODO://` This was a pre work project for Android assignment to let us get use to the android IDE
 
-public class MainActivity extends AppCompatActivity {
+<img src="http://recordit.co/XxSwFMCton" width=200><br>
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
-        //this is to make the change text color button clickable:
-        findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ((TextView) findViewById(R.id.TextView)).setTextColor(
-                        getResources().getColor(R.color.colorAccent));
-            }
-        });
+### Required User Stories
+- [x] 1. User sees custom text in a label - Hello from {name}!
+- [x] 2. User see's custom background color.
+- [x] 3. User can tap a button to change the text color of the label.
 
-        //this is to make the background button clickable:
-        findViewById(R.id.button3).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                findViewById(R.id.wonderful).setBackgroundColor(
-                        getResources().getColor(R.color.tealish));
-            }
-        });
-
-        //this is to make the change text button clickable
-        findViewById(R.id.button4).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                /*grabbing the user input
-                putting the text when button of change text is clicked*/
-                String newText = ((EditText)findViewById(R.id.editText)).getText().toString();
-
-                if(TextUtils.isEmpty(newText)){
-                    ((TextView) findViewById(R.id.TextView)).setText("Hello from Christian!");
-                }
-                else{
-                    ((TextView) findViewById(R.id.TextView)).setText(newText);
-                }
-            }
-        });
-
-        //this button to reset the color back to original everything
-        findViewById(R.id.wonderful).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //resetting the text back to original.
-                ((TextView) findViewById(R.id.TextView)).setTextColor(
-                        getResources().getColor(R.color.orange));
-
-                //resetting the background color
-                findViewById(R.id.wonderful).setBackgroundColor(
-                        getResources().getColor(R.color.colorPrimary));
-
-                //resetting the text back to Hello
-                        ((TextView) findViewById(R.id.TextView)).setText("Hello from Christian!");
-                    }
-                });
-        }
-    }
+### Optional User Stories
+- [x] 1. User can tap a button to change the color of the background view.  
+- [x] 2. User can tap a button to change the text string of the label - Android is Awesome!  
+- [x] 3. User can tap on the background view to reset all views to default settings.  
+- [x] 4. User can update the label text with custom text entered into the text field.  
+   - [x] a. User can enter text into a text field using the keyboard.  
+   - [x] b. User can tap the "Change text string" button to update the label with the text from the text field.  
+   - [x] c. If the text field is empty, update label with default text string.  
