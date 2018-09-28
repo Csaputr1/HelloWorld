@@ -1,6 +1,7 @@
 # HelloWorld
-This is the pre work Hello world project for android assignment
-I LOVE TO CODE!
+/*This is the pre work Hello world project for android assignment
+I LOVE TO CODE!*/
+
 package com.example.user.helloworld;
 
 import android.support.v7.app.AppCompatActivity;
